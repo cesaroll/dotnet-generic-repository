@@ -22,6 +22,8 @@ namespace GenericRepository
 
         public Task<T> GetById(Guid id );
 
+        public Task<IList<T>> All();
+
         public IQueryable<T> Where(Expression<Func<T, bool>> expression);
     }
 }

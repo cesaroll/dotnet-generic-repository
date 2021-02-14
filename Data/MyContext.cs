@@ -1,12 +1,13 @@
+using System;
 using System.Reflection;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data
 {
-    public class AppContext : DbContext
+    public class MyContext : DbContext
     {
-        public AppContext(DbContextOptions<AppContext> options) : base(options){ }
+        public MyContext(DbContextOptions<MyContext> options) : base(options){ }
 
         public DbSet<Person> Person { get; set; }
 
@@ -14,7 +15,7 @@ namespace Data
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             // Seed data
-            modelBuilder.Entity<Person>().HasData(new Person() { Name = "Dayanaris", Family = "Targarien"});
+            modelBuilder.Entity<Person>().HasData(new Person() {Id = new Guid("c1fb12f4-a475-4557-98c9-6ed0a52539a4"), Name = "Dayanaris", Family = "Targarien"});
         }
     }
 }

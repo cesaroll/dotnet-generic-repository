@@ -6,10 +6,10 @@ namespace Data
 {
     public class UnitOfWork<T> : IUnitOfWork<T> where T: class, IEntity
     {
-        private readonly AppContext _context;
+        private readonly MyContext _context;
         public IRepository<T> Repository { get; }
         
-        public UnitOfWork(AppContext context)
+        public UnitOfWork(MyContext context)
         {
             this._context = context;
             Repository = new Repository<T>(context);

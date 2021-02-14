@@ -12,7 +12,7 @@ namespace Data
     {
         private DbSet<T> Table { get; set; }
 
-        public Repository(AppContext context)
+        public Repository(MyContext context)
         {
             Table = context.Set<T>();
         }

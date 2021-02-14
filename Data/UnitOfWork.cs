@@ -6,26 +6,17 @@ namespace Data
 {
     public class UnitOfWork<T> : IUnitOfWork<T> where T: class, IEntity
     {
-        private readonly AppContext context;
+        private readonly AppContext _context;
         public IRepository<T> Repository { get; }
         
         public UnitOfWork(AppContext context)
         {
-            this.context = context;
+            this._context = context;
             Repository = new Repository<T>(context);
         }
         
-        public async Task Commit()
-        {
-            await context.SaveChangesAsync();
-        }
-        
-        public void Dispose()
-        {
-            context.Dispose();
-        }
+        public async Task Commit() => await _context.SaveChangesAsync();
 
-        
-        
+        public void Dispose() => _context.Dispose();
     }
 }

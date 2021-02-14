@@ -4,6 +4,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FC89FEB9-153
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository", "GenericRepository\GenericRepository.csproj", "{BDE47064-5EDD-45BC-B372-3660E5990F1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B30653A5-DE3D-4804-B0CC-FF0134EDBB18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +13,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BDE47064-5EDD-45BC-B372-3660E5990F1D} = {FC89FEB9-153B-42D3-ADE6-E87B81E411D3}
+		{B30653A5-DE3D-4804-B0CC-FF0134EDBB18} = {FC89FEB9-153B-42D3-ADE6-E87B81E411D3}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BDE47064-5EDD-45BC-B372-3660E5990F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDE47064-5EDD-45BC-B372-3660E5990F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE47064-5EDD-45BC-B372-3660E5990F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE47064-5EDD-45BC-B372-3660E5990F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30653A5-DE3D-4804-B0CC-FF0134EDBB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30653A5-DE3D-4804-B0CC-FF0134EDBB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30653A5-DE3D-4804-B0CC-FF0134EDBB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30653A5-DE3D-4804-B0CC-FF0134EDBB18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

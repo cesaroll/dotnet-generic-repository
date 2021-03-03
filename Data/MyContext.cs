@@ -1,6 +1,6 @@
 using System;
 using System.Reflection;
-using Domain;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data

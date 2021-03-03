@@ -1,7 +1,7 @@
 ﻿using System;
 using GenericRepository;
 
-namespace Domain
+namespace Domain.Entities
 {
     public abstract class BaseEntity : IEntity
     {

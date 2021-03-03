@@ -26,6 +26,8 @@ namespace WebApp
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddEntityFramework(connectionString);
+
+            services.AddLocalServices();
             
             services.AddControllersWithViews();
         }

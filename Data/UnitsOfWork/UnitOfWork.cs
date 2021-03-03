@@ -1,9 +1,10 @@
-using System.ComponentModel.Design.Serialization;
+using System;
 using System.Threading.Tasks;
 using GenericRepository;
 
-namespace Data
+namespace Data.UnitsOfWork
 {
+    [Obsolete("No used anymore", true)]
     public class UnitOfWork<T> : IUnitOfWork<T> where T: class, IEntity
     {
         private readonly MyContext _context;

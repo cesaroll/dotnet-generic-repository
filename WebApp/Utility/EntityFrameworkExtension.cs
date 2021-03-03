@@ -1,5 +1,5 @@
 using Data;
-using GenericRepository;
+using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,8 +12,9 @@ namespace WebApp.Utility
             services.AddDbContext<MyContext>(options =>
                 options.UseNpgsql(connectionString, x => x.MigrationsAssembly("WebApp")));
 
-            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            //services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+            //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IPersonRepository, PersonRepository>();
 
             return services;
         }
